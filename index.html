@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Supercarros</h1>
+   
+            <ul>
+                <li><a href="index.html">Pág Principal</a></li>
+                <li><a href="page1.html">Pág 1</a></li>
+                <li><a href="page2.html">Pág 2</a></li>
+                <li><a href="page3.html">Pág 3</a></li>
+                <li><a href="page4.html">Pág 4</a></li>
+            </ul>
+
+    </header>
+    
+    <main>
+        <h2 class="a">Introducción</h2>
+        <p class="a">Esta página esta dedicacda a presentar 4 de las mejores marcas de supercarros en el mercado.</p>
+        <p class="a">Presentaremos 3 de sus mejores carros y daremos una descripción de cada uno detallando sus capacidades en la autopista.</p>
+    </main>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversor de Texto a QR</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    
+    
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Conversor de Texto a QR</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="qrcode" class="mb-3"></div>
+                        <div class="form-group">
+                            <input type="text" id="text" class="form-control" placeholder="Escribe algo aquí...">
+                        </div>
+                        <button onclick="generateQR()" class="btn btn-primary btn-block">Generar QR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        function generateQR() {
+            var text = document.getElementById("text").value;
+            document.getElementById("qrcode").innerHTML = "";
+            var qr = new QRCode(document.getElementById("qrcode"), {
+                text: text,
+                width: 200,
+                height: 200
+            });
+        }
+    </script>
+    
+    </body>
+
+</body>
+</html>
